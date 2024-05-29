@@ -9,6 +9,7 @@ on:
     types: [opened, synchronize, reopened, closed]
     branches:
       - main
+      - prbranch
 
 jobs:
   build_and_deploy_job:
@@ -32,7 +33,6 @@ jobs:
           app_location: "./src" # App source code path
           api_location: "" # Api source code path - optional
           output_location: "." # Built app content directory - optional
-          production_branch: "prbranch"
           ###### End of Repository/Build Configurations ######
 
   close_pull_request_job:
